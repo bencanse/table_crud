@@ -42,7 +42,7 @@ class Configuracion {
 	public static $db = array(
 		'server'   => 'localhost',
 		'user'     => 'root',
-		'password' => 'root',
+		'password' => '',
 		'db_name'  => 'daw2_table_crud',
 		'prefix_'  => 'daw2_'
 	);

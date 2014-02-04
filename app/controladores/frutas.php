@@ -62,7 +62,10 @@ class frutas extends \core\Controlador {
     public function form_modificar(array $datos = array()) {
 
         $datos["form_name"] = __FUNCTION__;
-        
+        if (\core\HTTP_Requerimiento::method() != "POST") {
+            $datos['mensaje'] = "No se puede intoducir un id en la URL, utiliza los botones.";
+            return \core\Distribuidor::cargar_controlador('errores', 'mensaje', $datos);
+        }
         if (!isset($datos["errores"])) { // Si no es un reenvío desde una validación fallida
             $validaciones = array(
                 "id" => "errores_requerido && errores_numero_entero_positivo && errores_referencia:id/frutas/id"
@@ -119,7 +122,10 @@ class frutas extends \core\Controlador {
     public function form_borrar(array $datos = array()) {
 
         $datos["form_name"] = __FUNCTION__;
-        
+        if (\core\HTTP_Requerimiento::method() != "POST") {
+            $datos['mensaje'] = "No se puede intoducir un id en la URL, utiliza los botones.";
+            return \core\Distribuidor::cargar_controlador('errores', 'mensaje', $datos);
+        }
         $validaciones = array(
             "id" => "errores_requerido && errores_numero_entero_positivo && errores_referencia:id/frutas/id"
         );
