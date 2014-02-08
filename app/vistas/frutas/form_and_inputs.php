@@ -1,4 +1,11 @@
-
+<script type="text/javascript">
+function limpiar(){
+    document.getElementById('nombre').value='';
+     document.getElementById('categoria').value='';
+     document.getElementById('precio').value=''; 
+     document.getElementById('descripcion').value='';
+}
+</script>
 <form method='post' name='<?php echo \core\Array_Datos::contenido("form_name", $datos); ?>' action="?menu=<?php echo \core\Controlador::get_controlador_instanciado(); ?>&submenu=validar_<?php echo \core\Controlador::get_metodo_invocado(); ?>" >
 	
 	<?php echo \core\HTML_Tag::form_registrar($datos["form_name"], "post"); ?>
@@ -21,6 +28,6 @@
 	<?php echo \core\HTML_Tag::span_error('errores_validacion', $datos); ?>
 	
 	<input type='submit' value='Enviar'>
-	<input type='reset' value='Limpiar'>
-	<button type='button' onclick='location.assign("?menu=<?php echo \core\Controlador::get_controlador_instanciado(); ?>&submenu=index");'>Cancelar</button>
+	<input type='button' value='Limpiar' onclick="limpiar();">
+	<button type='button' onclick='location.assign("<?php echo \core\URL::generar("frutas/index");?>");'>Cancelar</button>
 </form>

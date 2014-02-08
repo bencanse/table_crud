@@ -67,12 +67,12 @@ class Distribuidor {
 				
 			}
 			else {
-				$datos['mensaje'] = "El método <b>$metodo</b> no está definido en la clase <b>$controlador_clase</b> (.php).";
+				$datos['mensaje'] = "Documento no encontrado.";
 				return self::cargar_controlador("errores", "index", $datos);
 			}
 		}
 		else {
-			$datos['mensaje'] = "URL incorrecta.";
+			$datos['mensaje'] = "Documento no encontrado.";
 			return self::cargar_controlador("errores", "index", $datos);
 		}
 	}

@@ -9,6 +9,7 @@ class frutas extends \core\Controlador {
      * @param array $datos
      */
     public function index(array $datos = array()) {
+        
         $clausulas['order_by'] = 'nombre';
         //$datos["filas"] = \modelos\frutas::select($clausulas, "frutas"); // Recupera todas las filas ordenadas
         $datos["filas"] = \modelos\Modelo_SQL::table("frutas")->select($clausulas); // Recupera todas las filas ordenadas
@@ -98,7 +99,7 @@ class frutas extends \core\Controlador {
             , "nombre" => "errores_requerido && errores_texto"
             , "categoria" => "errores_requerido && errores_texto"
             , "descripcion" => "errores_requerido && errores_texto"
-            , "precio" => "errores_requerido && errores_precio_maximo"
+            , "precio" => "errores_requerido"
             , "fecha_compra" => "errores_fecha_hora"
            
         );
