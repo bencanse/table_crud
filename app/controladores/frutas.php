@@ -99,7 +99,7 @@ class frutas extends \core\Controlador {
             , "nombre" => "errores_requerido && errores_texto"
             , "categoria" => "errores_requerido && errores_texto"
             , "descripcion" => "errores_requerido && errores_texto"
-            , "precio" => "errores_requerido"
+            , "precio" => "errores_requerido && errores_precio"
             , "fecha_compra" => "errores_fecha_hora"
            
         );
