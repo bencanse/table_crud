@@ -1,5 +1,7 @@
 <div>
-	<h1>Listado de Frutas</h1>
+	<h1 style="color:red;">Listado de Frutas</h1>
+
+<button type='button' onclick='location.assign("<?php echo \core\URL::generar("frutas/form_insertar");?>");'>Insertar</button>
 
 	<table border='1'>
 		<thead>

@@ -7,6 +7,7 @@ class frutas extends \core\Controlador {
     /**
      * Presenta una <table> con las filas de la tabla con igual nombre que la clase.
      * @param array $datos
+     * @author bencanse <sergio_94-arg@hotmail.com>
      */
     public function index(array $datos = array()) {
         

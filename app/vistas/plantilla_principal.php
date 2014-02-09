@@ -38,7 +38,7 @@
 		<div id="encabezado">
                     
 			<img src="<?php echo URL_ROOT; ?>recursos/imagenes/trg0ki1391370510.gif" alt="logo" style ="margin-left:30%;"title="Logo"/>
-                        <h1>Sergio Benito</h1>
+                        <h1 style="color:red;">Sergio Benito</h1>
 			<!--<img src="<?php echo URL_ROOT; ?>recursos/imagenes/departamento_informatica.png" alt="logo" title="Logo departamento"  onclick="window.location.assign('http://www.iespalomeras.net/index.php?option=com_wrapper&view=wrapper&Itemid=86');" />-->
 			
 		</div>
@@ -70,8 +70,9 @@
 			
 		</div>
 
-	<hr/>
-                        
+	
+                 <br/><br/>     
+                 <hr/>
 		<div id="pie" style="background-color:#C0C0C0; ">
 			<br/>
 			<br/>
