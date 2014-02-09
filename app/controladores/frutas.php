@@ -107,7 +107,7 @@ class frutas extends \core\Controlador {
 
             $datos["errores"]["errores_validacion"] = "Corrige los errores.";
         } else {
-
+                $datos['values']['precio'] = \core\Conversiones::decimal_coma_a_punto($datos['values']['precio']);
             if (!$validacion = \modelos\Datos_SQL::update($datos["values"], 'frutas')) // Devuelve true o false
                 $datos["errores"]["errores_validacion"] = "No se han podido grabar los datos en la bd.";
         }

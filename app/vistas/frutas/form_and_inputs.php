@@ -6,7 +6,7 @@ function limpiar(){
      document.getElementById('descripcion').value='';
 }
 </script>
-<form method='post' name='<?php echo \core\Array_Datos::contenido("form_name", $datos); ?>' action="?menu=<?php echo \core\Controlador::get_controlador_instanciado(); ?>&submenu=validar_<?php echo \core\Controlador::get_metodo_invocado(); ?>" >
+<form method='post' name='<?php echo \core\Array_Datos::contenido("form_name", $datos); ?>' action="<?php echo \core\URL::generar(\core\Controlador::get_controlador_instanciado()."/validar_".\core\Controlador::get_metodo_invocado());?>" >
 	
 	<?php echo \core\HTML_Tag::form_registrar($datos["form_name"], "post"); ?>
 	
@@ -17,7 +17,7 @@ function limpiar(){
 	categoria: <input id='categoria' name='categoria' type='text' size='100'  maxlength='100' value='<?php echo \core\Array_Datos::values('categoria', $datos); ?>'/>
 	<?php echo \core\HTML_Tag::span_error('categoria', $datos); ?>
 	<br />
-	precio: <input id='precio' name='precio' type='text' size='100'  maxlength='100' value='<?php echo \core\Array_Datos::values('precio', $datos); ?>'/>
+        precio: <input id='precio' name='precio' type='text' size='100'  maxlength='100' value='<?php echo \core\Conversiones::decimal_punto_a_coma(\core\Array_Datos::values('precio', $datos)); ?>'/>
 	<?php echo \core\HTML_Tag::span_error('precio', $datos); ?>
 	<br />
 	Descripcion:<br />
