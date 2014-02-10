@@ -4,6 +4,10 @@ namespace modelos;
 
 class frutas extends \core\sgbd\bd {
 	
+     /**
+     * datos de donde se sacaran para formar la tabla en el controlador
+     * @author bencanse <sergio_94-arg@hotmail.com>
+     */
 	public static $tabla = 'frutas';
 	
 	

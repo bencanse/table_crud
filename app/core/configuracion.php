@@ -39,23 +39,23 @@ class Configuracion {
 	
 	
 	// localhost
-	public static $db = array(
-		'server'   => 'localhost',
-		'user'     => 'root',
-		'password' => '',
-		'db_name'  => 'daw2_table_crud',
-		'prefix_'  => 'daw2_'
-	);
-	
-
-	// hostinger
 //	public static $db = array(
-//		'server'   => 'mysql.hostinger.es',
-//		'user'     => 'u452950836_daw2',
-//		'password' => 'u452950836_daw2',
-//		'db_name'   => 'u452950836_daw2',
+//		'server'   => 'localhost',
+//		'user'     => 'root',
+//		'password' => '',
+//		'db_name'  => 'daw2_table_crud',
 //		'prefix_'  => 'daw2_'
 //	);
+//	
+
+	// hostinger
+	public static $db = array(
+		'server'   => 'mysql.hostinger.es',
+		'user'     => 'u341882504_daw2',
+		'password' => 'u341882504_daw2',
+                'db_name'   => 'u341882504_daw2',
+		'prefix_'  => 'daw2_'
+	);
 	
 	
 	
